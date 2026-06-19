@@ -30,7 +30,7 @@ export const register = async (req, res) => {
             }
         });
 
-        res.status(201).json({
+        return res.status(201).json({
             message: "Register berhasil",
             user: {
                 id: newUser.id,
@@ -41,7 +41,7 @@ export const register = async (req, res) => {
             },
         })
     } catch (error) {
-        res.status(400).json({
+        return res.status(400).json({
             message: "Error validation",
             error: error.message
         })
@@ -66,7 +66,7 @@ export const login = async (req, res) => {
         });
 
         if (!user) {
-            res.status(404).json({
+            return res.status(404).json({
                 message: "User tidak ditemukan"
             })
         }

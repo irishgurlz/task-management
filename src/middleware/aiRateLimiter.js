@@ -31,7 +31,7 @@ const aiRateLimiter = async (req, res, next) => {
     next();
   } catch (err) {
     console.error("Rate limiter error:", err);
-    res.status(503).json({
+    return res.status(503).json({
       message: "Layanan rate limiter tidak tersedia, coba lagi sebentar"
     });
   }

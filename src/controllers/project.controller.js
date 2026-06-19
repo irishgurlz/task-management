@@ -17,12 +17,12 @@ export const createProject = async (req, res) => {
                     created_by: req.user.id
                 }
             })
-            res.status(201).json({
+            return res.status(201).json({
                 message: "Project berhasil dibuat",
                 project
             })
         } catch (error) {
-            res.status(500).json({
+            return res.status(500).json({
                 error: error.message
             })
         }
@@ -33,12 +33,12 @@ export const allProject = async (req, res) => {
     try {
         const dataProject = await prisma.project.findMany()
 
-        res.status(200).json({
+        return res.status(200).json({
             message: "Tampil Semua Project",
             projects: dataProject
         })
     } catch (error) {
-        res.status(500).json({
+        return res.status(500).json({
             error: error.message
         })
     }
@@ -58,12 +58,12 @@ export const singleProject = async (req, res) => {
                 message: "Project tidak ditemukan"
             })
         }
-        res.status(200).json({
+        return res.status(200).json({
             message: "Detail data project",
             project: dataProject
         })
     } catch (error) {
-        res.status(500).json({
+        return res.status(500).json({
             error: error.message
         })
     }
@@ -130,11 +130,11 @@ export const deleteProject = async (req, res) => {
             }
         })
 
-        res.status(200).json({
+        return res.status(200).json({
             message: "Project berhasil dihapus"
         })
     } catch (err) {
-        res.status(500).json({
+        return res.status(500).json({
             message: err.message
         })
     }
@@ -159,12 +159,12 @@ export const getProjectTasks = async (req, res) => {
             })
         }
 
-        res.status(200).json({
+        return res.status(200).json({
             tasks: project.tasks
         })
 
     } catch (err) {
-        res.status(500).json({
+        return res.status(500).json({
             message: err.message
         })
     }

@@ -71,15 +71,15 @@ export const aiCommand = async (req, res) => {
                             );
                         }
 
-                        if (action.data.assigned_to) {
+                        if (action.data.assignee_id) {
                             const user = await tx.user.findUnique({
                                 where: {
-                                    id: action.data.assigned_to
+                                    id: action.data.assignee_id
                                 }
                             });
                             if (!user) {
                                 throw new Error(
-                                    `User dengan ID ${action.data.assigned_to} tidak ditemukan`
+                                    `User dengan ID ${action.data.assignee_id} tidak ditemukan`
                                 );
                             }
                         }
@@ -176,7 +176,7 @@ export const aiCommand = async (req, res) => {
             }
         });
 
-        res.status(200).json({
+        return res.status(200).json({
             message: "Command berhasil dieksekusi",
             actions
         });
@@ -199,7 +199,7 @@ export const aiCommand = async (req, res) => {
             }
         });
 
-        res.status(500).json({
+        return res.status(500).json({
             message: err.message
         });
     }
