@@ -89,7 +89,7 @@ export const login = async (req, res) => {
             { expiresIn: "1d" }
         );
 
-        res.status(200).json({
+        return res.status(200).json({
             user: {
                 id: user.id,
                 name: user.name,
