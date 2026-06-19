@@ -4,6 +4,8 @@ import express from "express";
 import userRouter from "./routes/user.router.js";
 import projectRouter from "./routes/project.router.js";
 import taskRouter from "./routes/task.router.js";
+import aiRouter from "./routes/aiCommand.router.js";
+
 import prisma from "./lib/prisma.js";
 // import redisClient from "./lib/redis.js";
 
@@ -21,7 +23,7 @@ app.get("/", (req, res) => {
 app.use("/auth", userRouter);
 app.use("/projects", projectRouter);
 app.use("/tasks", taskRouter);
-
+app.use("/ai", aiRouter);
 
 app.listen(port, () => {
   console.log(`App berjalan di port: ${port}`);
