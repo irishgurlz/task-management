@@ -1,0 +1,29 @@
+model Task {
+  id Int @id @default(autoincrement())
+
+  project_id Int
+  project    Project @relation(fields: [project_id], references: [id])
+
+  title       String
+  description String?
+
+  status   TaskStatus @default(todo)
+  priority Priority   @default(medium)
+
+  assignee_id Int
+  assignee    User @relation(fields: [assignee_id], references: [id])
+
+  @@map("task")
+}
+
+enum TaskStatus {
+  todo
+  in_progress
+  done
+}
+
+enum Priority {
+  low
+  medium
+  high
+}

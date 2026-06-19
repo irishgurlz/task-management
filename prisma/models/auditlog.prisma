@@ -1,0 +1,21 @@
+model AuditLog {
+  id              Int             @id @default(autoincrement())
+  
+  userId          Int             @map("user_id")
+  user            User            @relation(fields: [userId], references: [id])
+
+  action          String
+  requestPayload  Json?           @map("request_payload")
+  responsePayload Json?           @map("response_payload")
+  status          AuditLogStatus
+  failedReason    String?         @map("failed_reason")
+  createdAt       DateTime        @default(now()) @map("created_at")
+
+
+  @@map("audit_log")
+}
+
+enum AuditLogStatus {
+  SUCCESS
+  FAILED
+}
