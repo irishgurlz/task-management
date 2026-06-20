@@ -80,7 +80,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxODgxNDc3LCJleHAiOjE3ODE5Njc4Nzd9.4HFxM1luOiFWEoiYd7Jc8DWf_WTDtR7rKrRqitQTLhA",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxOTE5NjgwLCJleHAiOjE3ODIwMDYwODB9._i_aSCr21YSdtN2dYL7oHgTl_9TPFw-9zNXdURFIVO8",
                   "type": "string"
                 }
               ]
@@ -97,12 +97,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/projects",
-              "protocol": "http",
+              "raw": "{{base_url}}/projects",
               "host": [
-                "localhost"
+                "{{base_url}}"
               ],
-              "port": "3000",
               "path": [
                 "projects"
               ]
@@ -126,12 +124,10 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/projects",
-              "protocol": "http",
+              "raw": "{{base_url}}/projects",
               "host": [
-                "localhost"
+                "{{base_url}}"
               ],
-              "port": "3000",
               "path": [
                 "projects"
               ]
@@ -147,7 +143,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxODgxNDc3LCJleHAiOjE3ODE5Njc4Nzd9.4HFxM1luOiFWEoiYd7Jc8DWf_WTDtR7rKrRqitQTLhA",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxOTE5NjgwLCJleHAiOjE3ODIwMDYwODB9._i_aSCr21YSdtN2dYL7oHgTl_9TPFw-9zNXdURFIVO8",
                   "type": "string"
                 }
               ]
@@ -155,12 +151,10 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/projects/1",
-              "protocol": "http",
+              "raw": "{{base_url}}/projects/1",
               "host": [
-                "localhost"
+                "{{base_url}}"
               ],
-              "port": "3000",
               "path": [
                 "projects",
                 "1"
@@ -177,7 +171,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxODgxNDc3LCJleHAiOjE3ODE5Njc4Nzd9.4HFxM1luOiFWEoiYd7Jc8DWf_WTDtR7rKrRqitQTLhA",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxOTE5NjgwLCJleHAiOjE3ODIwMDYwODB9._i_aSCr21YSdtN2dYL7oHgTl_9TPFw-9zNXdURFIVO8",
                   "type": "string"
                 }
               ]
@@ -194,12 +188,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/projects/1",
-              "protocol": "http",
+              "raw": "{{base_url}}/projects/1",
               "host": [
-                "localhost"
+                "{{base_url}}"
               ],
-              "port": "3000",
               "path": [
                 "projects",
                 "1"
@@ -216,7 +208,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxODMyMDQ3LCJleHAiOjE3ODE5MTg0NDd9.X1HYy6zOj5xyZZioE2uxsSlJx-mcexeKvnoLVJswFmk",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxOTE5NjgwLCJleHAiOjE3ODIwMDYwODB9._i_aSCr21YSdtN2dYL7oHgTl_9TPFw-9zNXdURFIVO8",
                   "type": "string"
                 }
               ]
@@ -224,15 +216,13 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/projects/2",
-              "protocol": "http",
+              "raw": "{{base_url}}/projects/4",
               "host": [
-                "localhost"
+                "{{base_url}}"
               ],
-              "port": "3000",
               "path": [
                 "projects",
-                "2"
+                "4"
               ]
             }
           },
@@ -246,7 +236,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxODMyMDQ3LCJleHAiOjE3ODE5MTg0NDd9.X1HYy6zOj5xyZZioE2uxsSlJx-mcexeKvnoLVJswFmk",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6InVzZXIiLCJpYXQiOjE3ODE5MTkzODgsImV4cCI6MTc4MjAwNTc4OH0.WR_A-R3EVOUixQxVo6X4wrKe_JQV6JMPzFak5Ng9DWI",
                   "type": "string"
                 }
               ]
@@ -282,7 +272,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxODMyMDQ3LCJleHAiOjE3ODE5MTg0NDd9.X1HYy6zOj5xyZZioE2uxsSlJx-mcexeKvnoLVJswFmk",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxOTE5NjgwLCJleHAiOjE3ODIwMDYwODB9._i_aSCr21YSdtN2dYL7oHgTl_9TPFw-9zNXdURFIVO8",
                   "type": "string"
                 }
               ]
@@ -290,12 +280,10 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/tasks",
-              "protocol": "http",
+              "raw": "{{base_url}}/tasks",
               "host": [
-                "localhost"
+                "{{base_url}}"
               ],
-              "port": "3000",
               "path": [
                 "tasks"
               ]
@@ -311,7 +299,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxODMyMDQ3LCJleHAiOjE3ODE5MTg0NDd9.X1HYy6zOj5xyZZioE2uxsSlJx-mcexeKvnoLVJswFmk",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxOTE5NjgwLCJleHAiOjE3ODIwMDYwODB9._i_aSCr21YSdtN2dYL7oHgTl_9TPFw-9zNXdURFIVO8",
                   "type": "string"
                 }
               ]
@@ -319,15 +307,13 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/tasks/1",
-              "protocol": "http",
+              "raw": "{{base_url}}/tasks/5",
               "host": [
-                "localhost"
+                "{{base_url}}"
               ],
-              "port": "3000",
               "path": [
                 "tasks",
-                "1"
+                "5"
               ]
             }
           },
@@ -341,7 +327,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxODMyMDQ3LCJleHAiOjE3ODE5MTg0NDd9.X1HYy6zOj5xyZZioE2uxsSlJx-mcexeKvnoLVJswFmk",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxOTE5NjgwLCJleHAiOjE3ODIwMDYwODB9._i_aSCr21YSdtN2dYL7oHgTl_9TPFw-9zNXdURFIVO8",
                   "type": "string"
                 }
               ]
@@ -358,12 +344,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/tasks",
-              "protocol": "http",
+              "raw": "{{base_url}}/tasks",
               "host": [
-                "localhost"
+                "{{base_url}}"
               ],
-              "port": "3000",
               "path": [
                 "tasks"
               ]
@@ -379,7 +363,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxODMyMDQ3LCJleHAiOjE3ODE5MTg0NDd9.X1HYy6zOj5xyZZioE2uxsSlJx-mcexeKvnoLVJswFmk",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxOTE5NjgwLCJleHAiOjE3ODIwMDYwODB9._i_aSCr21YSdtN2dYL7oHgTl_9TPFw-9zNXdURFIVO8",
                   "type": "string"
                 }
               ]
@@ -396,7 +380,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/tasks/1",
+              "raw": "http://localhost:3000/tasks/4",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -404,7 +388,7 @@
               "port": "3000",
               "path": [
                 "tasks",
-                "1"
+                "4"
               ]
             }
           },
@@ -418,7 +402,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxODMyMDQ3LCJleHAiOjE3ODE5MTg0NDd9.X1HYy6zOj5xyZZioE2uxsSlJx-mcexeKvnoLVJswFmk",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxOTE5NjgwLCJleHAiOjE3ODIwMDYwODB9._i_aSCr21YSdtN2dYL7oHgTl_9TPFw-9zNXdURFIVO8",
                   "type": "string"
                 }
               ]
@@ -426,15 +410,13 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/tasks/1",
-              "protocol": "http",
+              "raw": "{{base_url}}/tasks/6",
               "host": [
-                "localhost"
+                "{{base_url}}"
               ],
-              "port": "3000",
               "path": [
                 "tasks",
-                "1"
+                "6"
               ]
             }
           },
@@ -450,7 +432,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxODcxMDg2LCJleHAiOjE3ODE5NTc0ODZ9.I1wfyCvyfgZILGsQh0gssdyDhull_EzmLyPCimTTWbY",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgxOTE5NjgwLCJleHAiOjE3ODIwMDYwODB9._i_aSCr21YSdtN2dYL7oHgTl_9TPFw-9zNXdURFIVO8",
               "type": "string"
             }
           ]
@@ -459,7 +441,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"prompt\": \"Tolong buatkan task baru di project ID 1 dengan judul 'Fix Login Bug', assign ke user ID 3. Terus sekalian ubah status task ID 2 jadi 'on progress'\"\r\n}",
+          "raw": "{\r\n  \"prompt\": \"Tolong buatkan task baru di project ID 3 dengan judul 'Fix Error', assign ke user ID 3. Terus sekalian ubah status task ID 12 jadi 'todo'. Hapus juga task dengan ID 10\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -467,12 +449,10 @@
           }
         },
         "url": {
-          "raw": "http://localhost:3000/ai/command",
-          "protocol": "http",
+          "raw": "{{base_url}}/ai/command",
           "host": [
-            "localhost"
+            "{{base_url}}"
           ],
-          "port": "3000",
           "path": [
             "ai",
             "command"

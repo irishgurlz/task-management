@@ -8,7 +8,6 @@ export const aiCommand = async (req, res) => {
     try {
 
         const aiResponse = await parsePrompt(prompt);
-        // console.log("AI Response:");
         console.log(aiResponse);
         let parsed;
 
@@ -59,16 +58,18 @@ export const aiCommand = async (req, res) => {
                             throw new Error("Asignee wajib diisi");
                         }
 
-                        const project = await tx.project.findUnique({
-                            where: {
-                                id: action.data.project_id
-                            }
-                        });
+                        if (action.data.project_id !== undefined) {
+                            const project = await tx.project.findUnique({
+                                where: {
+                                    id: action.data.project_id
+                                }
+                            });
 
-                        if (!project) {
-                            throw new Error(
-                                `Project dengan ID ${action.data.project_id} tidak ditemukan`
-                            );
+                            if (!project) {
+                                throw new Error(
+                                    `Project dengan ID ${action.data.project_id} tidak ditemukan`
+                                );
+                            }
                         }
 
                         if (action.data.assignee_id) {
@@ -86,21 +87,22 @@ export const aiCommand = async (req, res) => {
                         console.log(action);
                         await tx.task.create({
                             data: {
-                                title: action.data.title,
-                                description:
-                                    action.data.description ??
-                                    `${action.data.title}`,
-
                                 project: {
                                     connect: {
                                         id: action.data.project_id
                                     }
                                 },
+                                title: action.data.title,
                                 assignee: {
                                     connect: {
                                         id: action.data.assignee_id
                                     }
-                                }
+                                },
+                                description:
+                                    action.data.description ??
+                                    `${action.data.title}`,
+                                status: action.data.status,
+                                priority: action.data.priority
                             }
                         });
                         break;
@@ -120,16 +122,71 @@ export const aiCommand = async (req, res) => {
                                 `Task dengan ID ${action.data.task_id} tidak ditemukan`
                             );
                         }
+                        if (action.data.assignee_id) {
+                            const user = await tx.user.findUnique({
+                                where: {
+                                    id: action.data.assignee_id
+                                }
+                            });
+                            if (!user) {
+                                throw new Error(
+                                    `User dengan ID ${action.data.assignee_id} tidak ditemukan`
+                                );
+                            }
+                        }
+                        if (action.data.project_id !== undefined) {
+                            const project = await tx.project.findUnique({
+                                where: {
+                                    id: action.data.project_id
+                                }
+                            });
+
+                            if (!project) {
+                                throw new Error(
+                                    `Project dengan ID ${action.data.project_id} tidak ditemukan`
+                                );
+                            }
+                        }
+
+                        const data = {};
+
+                        if (action.data.project_id !== undefined) {
+                            data.project = {
+                                connect: {
+                                    id: action.data.project_id
+                                }
+                            };
+                        }
+
+                        if (action.data.assignee_id !== undefined) {
+                            data.assignee = {
+                                connect: {
+                                    id: action.data.assignee_id
+                                }
+                            };
+                        }
+
+                        if (action.data.title !== undefined) {
+                            data.title = action.data.title;
+                        }
+
+                        if (action.data.description !== undefined) {
+                            data.description = action.data.description;
+                        }
+
+                        if (action.data.status !== undefined) {
+                            data.status = action.data.status;
+                        }
+
+                        if (action.data.priority !== undefined) {
+                            data.priority = action.data.priority;
+                        }
+
                         await tx.task.update({
                             where: {
                                 id: action.data.task_id
                             },
-                            data: {
-                                title: action.data.title,
-                                description: action.data.description,
-                                status: action.data.status,
-                                priority: action.data.priority
-                            }
+                            data
                         });
                         break;
                     }
