@@ -141,7 +141,7 @@ Authorization: Bearer <token>
 
 | Method | Endpoint | Akses | Keterangan |
 |---|---|---|---|
-| POST | `/tasks` | admin, user | Buat task (`project_id`, `title`, `description`, `assignee_id`) |
+| POST | `/tasks` | admin, user | Buat task (`project_id`, `title`, `description`, `assignee_id`, `status`, `priority`) |
 | GET | `/tasks` | admin, user | List semua task |
 | GET | `/tasks/:id` | admin, user | Detail satu task |
 | PUT | `/tasks/:id` | admin, user | Update task |

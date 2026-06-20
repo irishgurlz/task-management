@@ -336,7 +336,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{   \r\n    \"project_id\": 1,\r\n    \"title\": \"Fix Bug\",\r\n    \"description\": \"Membuat database untuk struktur data berikut\",\r\n    \"assignee_id\": 3\r\n}",
+              "raw": "{   \r\n    \"project_id\": 1,\r\n    \"title\": \"Fix Bug\",\r\n    \"description\": \"Membuat database untuk struktur data berikut\",\r\n    \"assignee_id\": 3,\r\n    \"status\": \"done\",\r\n    \"priority\": \"low\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"

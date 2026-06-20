@@ -1,7 +1,7 @@
 import prisma from "../lib/prisma.js";
 
 export const createTask = async (req, res) => {
-    const { project_id, title, description, assignee_id } = req.body
+    const { project_id, title, description, assignee_id, status, priority } = req.body
 
     if (!project_id || !title || !description || !assignee_id) {
         return res.status(400).json({
@@ -15,7 +15,9 @@ export const createTask = async (req, res) => {
                     project_id,
                     title,
                     description,
-                    assignee_id
+                    assignee_id,
+                    status,
+                    priority
                 }
             })
             return res.status(201).json({
@@ -72,7 +74,7 @@ export const singleTask = async (req, res) => {
 
 export const updateTask = async (req, res) => {
     const idParam = req.params.id
-    const { project_id, title, description, assignee_id } = req.body
+    const { project_id, title, description, assignee_id, status, priority } = req.body
 
     const data = {}
 
@@ -80,6 +82,8 @@ export const updateTask = async (req, res) => {
     if (title !== undefined) data.title = title
     if (description !== undefined) data.description = description
     if (assignee_id !== undefined) data.assignee_id = assignee_id
+    if (status !== undefined) data.status = status
+    if (priority !== undefined) data.priority = priority
 
     try {
         const task = await prisma.task.findUnique({
